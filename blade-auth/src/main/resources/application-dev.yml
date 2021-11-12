@@ -9,8 +9,18 @@ spring:
     url: ${blade.datasource.dev.url}
     username: ${blade.datasource.dev.username}
     password: ${blade.datasource.dev.password}
+  cloud:
+    nacos:
+      config:
+        server-addr: hadoop02:8848
+      discovery:
+        server-addr: hadoop02:8848
+      sentinel:
+        transport:
+          dashboard: hadoop02:8858
+
 
 #第三方登陆
 social:
   enabled: true
-  domain: http://127.0.0.1:1888
+  domain: http://hadoop02:1888

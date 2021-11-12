@@ -56,7 +56,7 @@ knife4j:
     enableSwaggerModels: true
     enableDocumentManage: true
     enableHost: false
-    enableHostText: http://localhost
+    enableHostText: http://hadoop02
     enableRequestCache: true
     enableFilterMultipartApis: false
     enableFilterMultipartApiMethodType: POST

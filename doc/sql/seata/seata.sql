@@ -4,7 +4,7 @@
  Source Server         : mysql_localhost
  Source Server Type    : MySQL
  Source Server Version : 50723
- Source Host           : localhost:3306
+ Source Host           : hadoop01:3306
  Source Schema         : seata
 
  Target Server Type    : MySQL

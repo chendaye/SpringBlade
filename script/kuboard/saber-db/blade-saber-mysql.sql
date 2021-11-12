@@ -4,7 +4,7 @@
  Source Server         : mysql_localhost
  Source Server Type    : MySQL
  Source Server Version : 50723
- Source Host           : localhost:3306
+ Source Host           : hadoop01:3306
  Source Schema         : blade
 
  Target Server Type    : MySQL
@@ -106,7 +106,7 @@ CREATE TABLE `blade_datasource`  (
 -- Records of blade_datasource
 -- ----------------------------
 BEGIN;
-INSERT INTO `blade_datasource` VALUES (1123598812738675201, 'mysql', 'com.mysql.cj.jdbc.Driver', 'jdbc:mysql://localhost:3306/blade?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true', 'root', 'root', 'mysql', 1, '2019-08-14 11:43:06', 1, '2019-08-14 11:43:06', 1, 0), (1123598812738675202, 'postgresql', 'org.postgresql.Driver', 'jdbc:postgresql://127.0.0.1:5432/blade', 'postgres', '123456', 'postgresql', 1, '2019-08-14 11:43:41', 1, '2019-08-14 11:43:41', 1, 0), (1123598812738675203, 'oracle', 'oracle.jdbc.OracleDriver', 'jdbc:oracle:thin:@127.0.0.1:49161:orcl', 'BLADE', 'blade', 'oracle', 1, '2019-08-14 11:44:03', 1, '2019-08-14 11:44:03', 1, 0);
+INSERT INTO `blade_datasource` VALUES (1123598812738675201, 'mysql', 'com.mysql.cj.jdbc.Driver', 'jdbc:mysql://hadoop01:3306/blade?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true', 'root', 'root', 'mysql', 1, '2019-08-14 11:43:06', 1, '2019-08-14 11:43:06', 1, 0), (1123598812738675202, 'postgresql', 'org.postgresql.Driver', 'jdbc:postgresql://127.0.0.1:5432/blade', 'postgres', '123456', 'postgresql', 1, '2019-08-14 11:43:41', 1, '2019-08-14 11:43:41', 1, 0), (1123598812738675203, 'oracle', 'oracle.jdbc.OracleDriver', 'jdbc:oracle:thin:@127.0.0.1:49161:orcl', 'BLADE', 'blade', 'oracle', 1, '2019-08-14 11:44:03', 1, '2019-08-14 11:44:03', 1, 0);
 COMMIT;
 
 -- ----------------------------

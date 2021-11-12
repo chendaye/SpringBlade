@@ -13,4 +13,4 @@ spring:
 #第三方登陆
 social:
   enabled: true
-  domain: http://127.0.0.1:1888
+  domain: http://hadoop02:1888
