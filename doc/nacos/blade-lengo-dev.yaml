@@ -1,0 +1,19 @@
+#自定义配置
+lengo:
+  name: lengo-name
+
+#放行配置
+blade:
+  secure:
+    skip-url:
+      - /lengo/**
+  datasource:
+    demo:
+      master:
+        url: jdbc:mysql://hadoop01:3306/blade?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+        username: root
+        password: root
+      slave:
+        url: jdbc:mysql://hadoop01:3306/blade_slave?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+        username: root
+        password: root

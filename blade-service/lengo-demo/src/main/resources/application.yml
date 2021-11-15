@@ -1,0 +1,25 @@
+#mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath:com/example/**/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.example.**.entity,org.springbalde.**.entity
+  global-config:
+    # 关闭MP3.0自带banner
+    banner: false
+    db-config:
+      # 主键策略：ASSIGN_ID（雪花算法） ASSIGN_UUID（排除中划线的UUID）AUTO（数据库ID自增）INPUT（插入前自行设置主键值）
+      id-type: auto
+      # 逻辑删除 1：已删除 0:未删除
+      logic-delete-field: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+
+#swagger扫描路径配置
+swagger:
+  base-packages:
+    - org.springbalde
+    - com.example
+

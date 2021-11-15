@@ -87,6 +87,7 @@ blade:
   secure:
     skip-url:
       - /test/**
+      - /api/info/**
     client:
       - client-id: sword
         path-patterns:

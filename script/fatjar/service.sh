@@ -1,10 +1,12 @@
 #!/bin/bash
 
 #设置jar文件名
-APP_NAME=app.jar
+APP_NAME=$1
 
 #使用说明，用来提示输入参数
 usage() {
+echo $APP_NAME
+echo
 echo "Usage: sh 执行脚本.sh [start|stop|restart|status]"
 exit 1
 }

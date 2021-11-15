@@ -43,6 +43,16 @@
             <version>${blade.tool.version}</version>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springblade</groupId>-->
+<!--            <artifactId>lengo-demo-api</artifactId>-->
+<!--            <version>${blade.project.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springblade</groupId>
+            <artifactId>lengo-demo</artifactId>
+            <version>${blade.project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

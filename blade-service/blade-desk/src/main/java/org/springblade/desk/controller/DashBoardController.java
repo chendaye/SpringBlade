@@ -1,10 +1,13 @@
 package org.springblade.desk.controller;
 
+import lombok.AllArgsConstructor;
+import org.springblade.lengo.entity.Blog;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.AllArgsConstructor;
 import org.springblade.core.tool.api.R;
 import org.springblade.core.tool.support.Kv;
+import org.springblade.lengo.feign.BlogClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,9 +24,10 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("dashboard")
-@AllArgsConstructor
+@AllArgsConstructor // 相当于 Autowire
 @Api(value = "首页", tags = "首页")
 public class DashBoardController {
+	private final BlogClient client;
 
 	/**
 	 * 活跃用户
@@ -54,5 +58,18 @@ public class DashBoardController {
 		list.add(map2);
 
 		return R.data(list);
+	}
+
+	/**
+	 * 获取Blog 详情
+	 * 业务模块间的 restful 调用
+	 * 远程调用 lengo 模块 BlogClientImpl.detail Controller
+	 * @param id
+	 * @return
+	 */
+	@GetMapping("/blog-detail")
+	public R<Blog> blogDetail(Integer id){
+		R<Blog> result = client.detail(id);
+		return result;
 	}
 }
