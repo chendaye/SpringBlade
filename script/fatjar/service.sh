@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #设置jar文件名
-APP_NAME=$1
+APP_NAME=$2
 
 #使用说明，用来提示输入参数
 usage() {
